@@ -26,4 +26,5 @@ Esse diagrama de classe referente ao TCC da faculdade FATEC JALES:
 </br>
 
 
-![image](https://github.com/guicarsiqsantos/Documenta-o-TCC-Faculdade/assets/70959791/0f6cdc88-7996-44e1-8e49-a9796297f9a2)
+![image](https://github.com/guicarsiqsantos/Documenta-o-TCC-Faculdade/assets/70959791/bcbd7883-b34d-404d-93f0-7fe8cd2c7891)
+
