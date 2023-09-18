@@ -1,7 +1,3 @@
-# Documenta-o-TCC-Faculdade
-
-</br>
-</br>
 
 ## 🤝 Colaboradores
 
@@ -11,25 +7,33 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/70959791?v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Guilherme Carvalho</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <img src="https://avatars.githubusercontent.com/u/74615333?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
         <sub>
-          <b>Mark Zuckerberg</b>
+          <b>Victor Hugo</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://miro.medium.com/max/360/0*1SkS3mSorArvY9kS.jpg" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <img src="https://avatars.githubusercontent.com/u/106820409?v=4" width="100px;" alt="Foto do Steve Jobs"/><br>
         <sub>
-          <b>Steve Jobs</b>
+          <b>Kauã Henrique</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://scontent-gru1-2.xx.fbcdn.net/v/t1.6435-9/104169738_687672685112542_1468337677738709328_n.png?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFgB3hURH1rc9l7sCZqkKWKsd8e2frMzMOx3x7Z-szMw4hlwK7RL4TUwbRp9II67yJrOJ24LbNwl1m9dCXBvQYX&_nc_ohc=isosHi466pUAX848skJ&_nc_ht=scontent-gru1-2.xx&oh=00_AfBz5Nm1R3lGSSWz5M0z0M1pU2DFVHX4jnLwQ04mGXxbTw&oe=652FB661" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <sub>
+          <b>Leandro Bergamini</b>
         </sub>
       </a>
     </td>
@@ -38,7 +42,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 </br>
 
-INTRODUÇÃO
+📝 - <strong>INTRODUÇÃO</strong>
 
 
   A história do estágio no Brasil remonta a décadas passadas. O primeiro registro legal sobre a prática do estágio no país ocorreu em 1942, com a promulgação do Decreto-Lei nº 4.073, que instituiu a Lei Orgânica do Ensino Normal. 
@@ -60,7 +64,7 @@ INTRODUÇÃO
 </br>
 </br>
 
-## Telas do SoftWare de vagas para estágio - (INCOMPLETO)
+## 🚀 Telas do SoftWare de vagas para estágio - (INCOMPLETO)
 
 Essas telas são referentes as telas do nosso SoftWare:
 
