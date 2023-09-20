@@ -38,6 +38,18 @@ namespace TechVagasAPI.Controllers
 			return cargos;
         }
 
+		[HttpPost]
+		public ActionResult Post(CargoModel cargo) 
+		{
+			if (cargo is null)
+				return BadRequest();
+
+			_context.Cargos.Add(cargo);
+			_context.SaveChanges();
+
+			return new CreatedAtRouteResult("ObterCargo",
+				new { id = cargo.CargoId }, cargo);
+		}
 
 	}
 }
