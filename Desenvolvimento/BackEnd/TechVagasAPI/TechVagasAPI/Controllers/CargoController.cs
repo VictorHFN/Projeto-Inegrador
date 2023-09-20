@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TechVagasAPI.Context;
 using TechVagasAPI.Models;
 
@@ -51,5 +52,17 @@ namespace TechVagasAPI.Controllers
 				new { id = cargo.CargoId }, cargo);
 		}
 
+		[HttpPut("{id:int}")]
+		public ActionResult Put(int id, CargoModel cargo) 
+		{
+			if (id != cargo.CargoId) 
+			{
+				return BadRequest();
+			}
+			_context.Entry(cargo).State = EntityState.Modified;
+			_context.SaveChanges();
+
+			return Ok(cargo);
+		}
 	}
 }
