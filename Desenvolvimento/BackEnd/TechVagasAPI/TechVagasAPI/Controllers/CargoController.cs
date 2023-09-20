@@ -27,5 +27,17 @@ namespace TechVagasAPI.Controllers
 			return cargos;
 		}
 
+		[HttpGet("{id:int}", Name ="ObterCargo")]
+		public ActionResult<CargoModel> Get(int id) 
+		{
+			var cargos = _context.Cargos.FirstOrDefault(c => c.CargoId == id);
+            if (cargos is null)
+            {
+				return NotFound("Cargo não encontrado");
+            }
+			return cargos;
+        }
+
+
 	}
 }
