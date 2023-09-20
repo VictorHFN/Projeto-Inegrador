@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using TechVagasAPI.Context;
+
 namespace TechVagasAPI
 {
     public class Program
@@ -13,7 +16,12 @@ namespace TechVagasAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            var app = builder.Build();
+			var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+			    builder.Services.AddDbContext<AppDbContext>(options =>
+							  options.UseNpgsql(connectionString));
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
