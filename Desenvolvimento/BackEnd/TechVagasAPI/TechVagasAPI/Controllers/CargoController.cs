@@ -64,5 +64,19 @@ namespace TechVagasAPI.Controllers
 
 			return Ok(cargo);
 		}
+		[HttpDelete("{id:int}")]
+		public ActionResult Delete(int id) 
+		{
+			var cargo = _context.Cargos.FirstOrDefault(c => c.CargoId == id);
+
+			if(cargo is null) 
+			{
+				return NotFound("Cargos não encontrado...");
+			}
+			_context.Cargos.Remove(cargo);
+			_context.SaveChanges();
+
+			return Ok(cargo);
+		}
 	}
 }
