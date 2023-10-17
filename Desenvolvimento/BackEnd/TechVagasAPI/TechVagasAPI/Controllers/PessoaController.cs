@@ -27,6 +27,7 @@ namespace TechVagasAPI.Controllers
 			}
 			return pessoa;
 		}
+
 		[HttpGet("{id:int}", Name = "ObterPessoa")]
 		public ActionResult<PessoaModel> Get(int id)
 		{
@@ -36,6 +37,19 @@ namespace TechVagasAPI.Controllers
 				return NotFound("Pessoas não encontrado");
 			}
 			return pessoa;
+		}
+
+		[HttpPost]
+		public ActionResult Post(PessoaModel pessoa)
+		{
+			if (pessoa is null)
+				return BadRequest();
+
+			_context.Pessoas.Add(pessoa);
+			_context.SaveChanges();
+
+			return new CreatedAtRouteResult("ObterPessoa",
+				new { id = pessoa.PessoaId }, pessoa);
 		}
 	}
 }
