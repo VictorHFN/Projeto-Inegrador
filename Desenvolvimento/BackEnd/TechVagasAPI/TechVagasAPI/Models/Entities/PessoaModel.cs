@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TechVagasAPI.Models.Entities
+﻿namespace TechVagasAPI.Models.Entities
 {
     public class PessoaModel
     {
-        [Key]
         public int PessoaId { get; set; }
         public string? Nome { get; set; }
         public int Idade { get; set; }
@@ -19,7 +16,6 @@ namespace TechVagasAPI.Models.Entities
         public DateTime DataNascimento { get; set; }
         public string? NivelEscolaridade { get; set; }
         public string? Endereco { get; set; }
-
 
     }
 }
