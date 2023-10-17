@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TechVagasAPI.Context;
+using TechVagasAPI.Dtos.Entities;
 using TechVagasAPI.Models.Entities;
 
 namespace TechVagasAPI.Controllers

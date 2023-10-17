@@ -9,6 +9,7 @@ namespace TechVagasAPI.Context
         { }
 
         public DbSet<CargoModel>? Cargos { get; set; }
+        public DbSet<PessoaModel>? Pessoas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
