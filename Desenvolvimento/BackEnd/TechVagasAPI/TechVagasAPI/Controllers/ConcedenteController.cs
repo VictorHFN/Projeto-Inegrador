@@ -37,5 +37,18 @@ namespace TechVagasAPI.Controllers
 			}
 			return concedente;
 		}
+
+		[HttpPost]
+		public ActionResult Post(ConcedenteModel concedente)
+		{
+			if (concedente is null)
+				return BadRequest();
+
+			_context.Concedentes.Add(concedente);
+			_context.SaveChanges();
+
+			return new CreatedAtRouteResult("ObterConcedente",
+				new { id = concedente.ConcedenteId }, concedente);
+		}
 	}
 }
