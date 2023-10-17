@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TechVagasAPI.Context;
-using TechVagasAPI.Models;
+using TechVagasAPI.Models.Entities;
 
 namespace TechVagasAPI.Controllers
 {
-	[Route("api/[controller]")]
+    [Route("api/[controller]")]
 	[ApiController]
 	public class CargoController : ControllerBase
 	{
