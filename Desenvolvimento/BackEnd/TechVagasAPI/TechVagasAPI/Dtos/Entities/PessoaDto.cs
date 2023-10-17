@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using TechVagasAPI.Models.Entities;
 
 namespace TechVagasAPI.Dtos.Entities
 {
