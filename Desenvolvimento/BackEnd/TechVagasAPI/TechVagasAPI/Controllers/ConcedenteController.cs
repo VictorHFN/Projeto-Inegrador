@@ -64,5 +64,20 @@ namespace TechVagasAPI.Controllers
 
 			return Ok(concedente);
 		}
+
+		[HttpDelete("{id:int}")]
+		public ActionResult Delete(int id)
+		{
+			var concedente = _context.Concedentes.FirstOrDefault(c => c.ConcedenteId == id);
+
+			if (concedente is null)
+			{
+				return NotFound("Concedentes não encontrados...");
+			}
+			_context.Concedentes.Remove(concedente);
+			_context.SaveChanges();
+
+			return Ok(concedente);
+		}
 	}
 }
