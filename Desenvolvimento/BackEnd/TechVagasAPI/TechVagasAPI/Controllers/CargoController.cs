@@ -65,6 +65,7 @@ namespace TechVagasAPI.Controllers
 
 			return Ok(cargo);
 		}
+
 		[HttpDelete("{id:int}")]
 		public ActionResult Delete(int id) 
 		{

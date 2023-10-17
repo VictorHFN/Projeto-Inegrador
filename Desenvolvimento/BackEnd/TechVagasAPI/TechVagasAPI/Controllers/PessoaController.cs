@@ -65,5 +65,20 @@ namespace TechVagasAPI.Controllers
 
 			return Ok(pessoa);
 		}
+
+		[HttpDelete("{id:int}")]
+		public ActionResult Delete(int id)
+		{
+			var pessoa = _context.Pessoas.FirstOrDefault(p => p.PessoaId == id);
+
+			if (pessoa is null)
+			{
+				return NotFound("Pessoas não encontradas...");
+			}
+			_context.Pessoas.Remove(pessoa);
+			_context.SaveChanges();
+
+			return Ok(pessoa);
+		}
 	}
 }
