@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TechVagasAPI.Context;
 using TechVagasAPI.Dtos.Entities;
 using TechVagasAPI.Models.Entities;
@@ -50,6 +51,19 @@ namespace TechVagasAPI.Controllers
 
 			return new CreatedAtRouteResult("ObterPessoa",
 				new { id = pessoa.PessoaId }, pessoa);
+		}
+
+		[HttpPut("{id:int}")]
+		public ActionResult Put(int id, PessoaModel pessoa)
+		{
+			if (id != pessoa.PessoaId)
+			{
+				return BadRequest();
+			}
+			_context.Entry(pessoa).State = EntityState.Modified;
+			_context.SaveChanges();
+
+			return Ok(pessoa);
 		}
 	}
 }
