@@ -10,15 +10,16 @@ namespace TechVagasAPI.Context
 
         public DbSet<CargoModel>? Cargos { get; set; }
         public DbSet<PessoaModel>? Pessoas { get; set; }
+        public DbSet<ConcedenteModel>? Concedentes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Cargo
+            //Cargos
             modelBuilder.Entity<CargoModel>().HasKey(c => c.CargoId);
             modelBuilder.Entity<CargoModel>().Property(c => c.Descricao).HasMaxLength(100).IsRequired();
             modelBuilder.Entity<CargoModel>().Property(c => c.Tipo).HasMaxLength(50).IsRequired();
 
-            //Pessoa
+            //Pessoas
             modelBuilder.Entity<PessoaModel>().HasKey(p => p.PessoaId);
             modelBuilder.Entity<PessoaModel>().Property(p => p.Nome).HasMaxLength(100).IsRequired();
             modelBuilder.Entity<PessoaModel>().Property(p => p.Idade);
@@ -34,7 +35,7 @@ namespace TechVagasAPI.Context
 			modelBuilder.Entity<PessoaModel>().Property(p => p.NivelEscolaridade).HasMaxLength(30).IsRequired();
             modelBuilder.Entity<PessoaModel>().Property(p => p.Endereco).HasMaxLength(35);
 
-            //Concedente
+            //Concedentes
             modelBuilder.Entity<ConcedenteModel>().HasKey(c => c.ConcedenteId);
             modelBuilder.Entity<ConcedenteModel>().Property(c => c.ResponsavelEmpresa).HasMaxLength(100).IsRequired();
 		}
