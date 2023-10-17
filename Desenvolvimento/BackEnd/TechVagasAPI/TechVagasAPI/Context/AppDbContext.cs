@@ -17,6 +17,7 @@ namespace TechVagasAPI.Context
             modelBuilder.Entity<CargoModel>().Property(c => c.Descricao).HasMaxLength(100).IsRequired();
             modelBuilder.Entity<CargoModel>().Property(c => c.Tipo).HasMaxLength(50).IsRequired();
 
+            //Pessoa
             modelBuilder.Entity<PessoaModel>().HasKey(p => p.PessoaId);
             modelBuilder.Entity<PessoaModel>().Property(p => p.Nome).HasMaxLength(100).IsRequired();
             modelBuilder.Entity<PessoaModel>().Property(p => p.Idade);
@@ -31,6 +32,10 @@ namespace TechVagasAPI.Context
             modelBuilder.Entity<PessoaModel>().Property(p => p.DataNascimento);
 			modelBuilder.Entity<PessoaModel>().Property(p => p.NivelEscolaridade).HasMaxLength(30).IsRequired();
             modelBuilder.Entity<PessoaModel>().Property(p => p.Endereco).HasMaxLength(35);
+
+            //Concedente
+            modelBuilder.Entity<ConcedenteModel>().HasKey(c => c.ConcedenteId);
+            modelBuilder.Entity<ConcedenteModel>().Property(c => c.ResponsavelEmpresa).HasMaxLength(100).IsRequired();
 		}
 
 	}

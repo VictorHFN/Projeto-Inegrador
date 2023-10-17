@@ -9,5 +9,5 @@ public class ConcedenteDto
 	[Required(ErrorMessage = "Informe o Responsável")]
 	[MinLength(3)]
 	[MaxLength(100)]
-	public string? ResponsavelEstagio { get; set; }
+	public string? ResponsavelEmpresa { get; set; }
 }

@@ -3,7 +3,7 @@
     public class ConcedenteModel : PessoaModel
     {
         public int ConcedenteId { get; set; }
-        public string? ResponsavelEstagio { get; set; }
+        public string? ResponsavelEmpresa { get; set; }
 
     }
 }
