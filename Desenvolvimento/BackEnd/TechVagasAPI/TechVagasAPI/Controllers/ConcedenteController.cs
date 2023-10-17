@@ -26,5 +26,16 @@ namespace TechVagasAPI.Controllers
 			}
 			return concedente;
 		}
+
+		[HttpGet("{id:int}", Name = "ObterConcedente")]
+		public ActionResult<ConcedenteModel> Get(int id)
+		{
+			var concedente = _context.Concedentes.FirstOrDefault(c => c.ConcedenteId == id);
+			if (concedente is null)
+			{
+				return NotFound("Concedentes não encontrados");
+			}
+			return concedente;
+		}
 	}
 }
