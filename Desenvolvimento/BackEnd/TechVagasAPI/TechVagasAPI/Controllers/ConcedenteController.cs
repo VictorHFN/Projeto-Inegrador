@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TechVagasAPI.Context;
 using TechVagasAPI.Models.Entities;
 
@@ -49,6 +50,19 @@ namespace TechVagasAPI.Controllers
 
 			return new CreatedAtRouteResult("ObterConcedente",
 				new { id = concedente.ConcedenteId }, concedente);
+		}
+
+		[HttpPut("{id:int}")]
+		public ActionResult Put(int id, ConcedenteModel concedente)
+		{
+			if (id != concedente.ConcedenteId)
+			{
+				return BadRequest();
+			}
+			_context.Entry(concedente).State = EntityState.Modified;
+			_context.SaveChanges();
+
+			return Ok(concedente);
 		}
 	}
 }
